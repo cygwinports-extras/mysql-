@@ -1,0 +1,37 @@
+DESCRIPTION="C++ bindings for the MySQL client library"
+HOMEPAGE="http://tangentsoft.net/mysql++/"
+SRC_URI="http://tangentsoft.net/mysql++/releases/${P}.tar.gz"
+
+PKG_NAMES="${PN} ${PN}-devel ${PN}-doc"
+PKG_HINTS='setup devel doc'
+PKG_CONTENTS[0]='--exclude=html usr/bin/ usr/share/'
+PKG_CONTENTS[1]='usr/include/ usr/lib/'
+PKG_CONTENTS[2]="usr/share/doc/${P}/html/"
+
+DIFF_EXCLUDES='Makefile.in refman examples autoconf_inc.m4 .bakefile_gen.state'
+
+src_compile() {
+	cd ${S}
+	./rebake -DEXAMPLES=no || error "rebake failed"
+	verbose aclocal --force -I config || error "aclocal failed"
+	verbose autoconf -f || error "autoconf failed"
+	verbose autoheader -f || error "autoheader failed"
+	touch config.h.in
+
+	cd ${B}
+	cygconf
+	cygmake __mysqlpp___importlib=-Wl,--out-implib,libmysqlpp.dll.a
+}
+
+src_install() {
+	cd ${B}
+	cyginstall
+
+	dodir /usr/bin
+	mv ${D}/usr/lib/*.dll ${D}/usr/bin/
+
+	dolib lib/libmysqlpp.dll.a
+
+	docinto html
+	dodoc ${S}/doc/refman/html/*
+}

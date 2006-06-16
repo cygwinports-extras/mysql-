@@ -1,0 +1,4 @@
+category: Database
+requires: cygwin libmysqlclient15
+sdesc: "C++ bindings for the MySQL client library (runtime)"
+ldesc: "C++ bindings for the MySQL client library"
