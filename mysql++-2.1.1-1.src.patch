@@ -1,4 +1,3 @@
-diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x autom4te.cache -x '*compile' -x 'intltool*.in' -x 'xml-i18n-*.in' -x '*.pyc' -x '*.mo' -x '*.gmo' -x ABOUT-NLS -x Makevars.template -x COPYING -x INSTALL -x '*.orig' -x '*.rej' -x '*~' -x '*.temp' -x texinfo.tex -x ylwrap -x configure -x gnome-doc-utils.make -x intltool.m4 -x omf.make -x xmldocs.make -x Makefile.in -x refman -x examples -x autoconf_inc.m4 -x .bakefile_gen.state origsrc/mysql++-2.1.1/config/mysql_loc.m4 src/mysql++-2.1.1/config/mysql_loc.m4
 --- origsrc/mysql++-2.1.1/config/mysql_loc.m4	2006-04-04 23:44:49.000000000 -0500
 +++ src/mysql++-2.1.1/config/mysql_loc.m4	2006-06-15 16:55:37.640625000 -0500
 @@ -49,7 +49,7 @@
@@ -10,7 +9,6 @@ diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depco
  		then
  			MYSQL_libdir=$m
  			break
-diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x autom4te.cache -x '*compile' -x 'intltool*.in' -x 'xml-i18n-*.in' -x '*.pyc' -x '*.mo' -x '*.gmo' -x ABOUT-NLS -x Makevars.template -x COPYING -x INSTALL -x '*.orig' -x '*.rej' -x '*~' -x '*.temp' -x texinfo.tex -x ylwrap -x configure -x gnome-doc-utils.make -x intltool.m4 -x omf.make -x xmldocs.make -x Makefile.in -x refman -x examples -x autoconf_inc.m4 -x .bakefile_gen.state origsrc/mysql++-2.1.1/lib/Doxyfile.in src/mysql++-2.1.1/lib/Doxyfile.in
 --- origsrc/mysql++-2.1.1/lib/Doxyfile.in	2006-04-04 23:44:49.000000000 -0500
 +++ src/mysql++-2.1.1/lib/Doxyfile.in	2006-06-15 18:29:30.687500000 -0500
 @@ -30,7 +30,7 @@
@@ -31,7 +29,6 @@ diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depco
  
  # The HTML_FOOTER tag can be used to specify a personal HTML footer for 
  # each generated HTML page. If it is left blank doxygen will generate a 
-diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x autom4te.cache -x '*compile' -x 'intltool*.in' -x 'xml-i18n-*.in' -x '*.pyc' -x '*.mo' -x '*.gmo' -x ABOUT-NLS -x Makevars.template -x COPYING -x INSTALL -x '*.orig' -x '*.rej' -x '*~' -x '*.temp' -x texinfo.tex -x ylwrap -x configure -x gnome-doc-utils.make -x intltool.m4 -x omf.make -x xmldocs.make -x Makefile.in -x refman -x examples -x autoconf_inc.m4 -x .bakefile_gen.state origsrc/mysql++-2.1.1/lib/lib.bkl src/mysql++-2.1.1/lib/lib.bkl
 --- origsrc/mysql++-2.1.1/lib/lib.bkl	2006-04-04 23:44:49.000000000 -0500
 +++ src/mysql++-2.1.1/lib/lib.bkl	2006-06-15 18:19:11.093750000 -0500
 @@ -66,13 +66,13 @@
@@ -52,7 +49,6 @@ diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depco
  		</action>
  
  		<action id="tags">
-diff -urN -x CYGWIN-PATCHES -x 'aclocal.m4*' -x ltmain.sh -x 'config.*' -x depcomp -x install-sh -x missing -x mkinstalldirs -x autom4te.cache -x '*compile' -x 'intltool*.in' -x 'xml-i18n-*.in' -x '*.pyc' -x '*.mo' -x '*.gmo' -x ABOUT-NLS -x Makevars.template -x COPYING -x INSTALL -x '*.orig' -x '*.rej' -x '*~' -x '*.temp' -x texinfo.tex -x ylwrap -x configure -x gnome-doc-utils.make -x intltool.m4 -x omf.make -x xmldocs.make -x Makefile.in -x refman -x examples -x autoconf_inc.m4 -x .bakefile_gen.state origsrc/mysql++-2.1.1/rebake src/mysql++-2.1.1/rebake
 --- origsrc/mysql++-2.1.1/rebake	2006-04-04 23:44:49.000000000 -0500
 +++ src/mysql++-2.1.1/rebake	2006-06-15 17:39:45.562500000 -0500
 @@ -1,6 +1,6 @@
