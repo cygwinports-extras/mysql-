@@ -1,0 +1,20 @@
+--- origsrc/mysql++-3.1.0/Makefile.in	2010-06-03 12:59:26.000000000 -0500
++++ src/mysql++-3.1.0/Makefile.in	2011-11-10 18:18:06.277203700 -0600
+@@ -471,7 +471,7 @@ $(LIBPREFIX)mysqlpp_ssqls2parse$(LIBEXT)
+ 	$(RANLIB) $@
+ 
+ ssqlsxlat$(EXEEXT): $(SSQLSXLAT_OBJECTS) $(DLLPREFIX)mysqlpp$(__mysqlpp___targetsuf3) $(LIBPREFIX)mysqlpp_ssqls2parse$(LIBEXT)
+-	$(CXX) -o $@ $(SSQLSXLAT_OBJECTS)    -L. -l@MYSQL_C_LIB_NAME@ @PTHREAD_LIBS@ @MYSQLPP_EXTRA_LIBS@ $(LDFLAGS)  -lmysqlpp -lmysqlpp_ssqls2parse $(LIBS)
++	$(CXX) -o $@ $(SSQLSXLAT_OBJECTS)    -L. -l@MYSQL_C_LIB_NAME@ @PTHREAD_LIBS@ @MYSQLPP_EXTRA_LIBS@ $(LDFLAGS) -lmysqlpp_ssqls2parse -lmysqlpp $(LIBS)
+ 	
+ 	$(__ssqlsxlat___mac_setfilecmd)
+ 
+@@ -531,7 +531,7 @@ test_sqlstream$(EXEEXT): $(TEST_SQLSTREA
+ 	$(__test_sqlstream___mac_setfilecmd)
+ 
+ test_ssqls2$(EXEEXT): $(TEST_SSQLS2_OBJECTS) $(DLLPREFIX)mysqlpp$(__mysqlpp___targetsuf3) $(LIBPREFIX)mysqlpp_ssqls2parse$(LIBEXT)
+-	$(CXX) -o $@ $(TEST_SSQLS2_OBJECTS)    -L. -l@MYSQL_C_LIB_NAME@ @PTHREAD_LIBS@ @MYSQLPP_EXTRA_LIBS@ $(LDFLAGS)  -lmysqlpp -lmysqlpp_ssqls2parse $(LIBS)
++	$(CXX) -o $@ $(TEST_SSQLS2_OBJECTS)    -L. -l@MYSQL_C_LIB_NAME@ @PTHREAD_LIBS@ @MYSQLPP_EXTRA_LIBS@ $(LDFLAGS)  -lmysqlpp_ssqls2parse -lmysqlpp $(LIBS)
+ 	
+ 	$(__test_ssqls2___mac_setfilecmd)
+ 

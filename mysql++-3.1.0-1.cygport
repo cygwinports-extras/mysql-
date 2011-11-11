@@ -1,0 +1,31 @@
+DESCRIPTION="C++ bindings for the MySQL client library"
+HOMEPAGE="http://tangentsoft.net/mysql++/"
+SRC_URI="http://tangentsoft.net/mysql++/releases/${P}.tar.gz"
+
+PATCH_URI="3.1.0-as-needed.patch
+	   3.1.0-gcc45.patch"
+
+PKG_NAMES="libmysqlpp3 libmysqlpp-devel libmysqlpp-doc"
+libmysqlpp3_CONTENTS="usr/bin/cygmysqlpp-3.dll"
+libmysqlpp_devel_CONTENTS="usr/include/ usr/lib/"
+libmysqlpp_doc_CONTENTS="usr/share/doc/${PN}/"
+
+DIFF_EXCLUDES='refman userman'
+
+src_compile() {
+	lndirs
+	cd ${B}
+	cygconf
+	cygmake
+}
+
+src_install() {
+	cd ${B}
+	cyginstall
+
+	dodir /usr/bin
+	mv ${D}/usr/lib/*.dll ${D}/usr/bin/
+
+	dodir /usr/share/doc/${PN}
+	cp -r ${S}/doc/html/* ${D}/usr/share/doc/${PN}
+}

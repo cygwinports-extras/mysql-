@@ -1,0 +1,10 @@
+--- origsrc/mysql++-3.1.0/ssx/genv2.cpp	2010-06-03 12:59:23.000000000 -0500
++++ src/mysql++-3.1.0/ssx/genv2.cpp	2011-11-10 18:23:30.175368200 -0600
+@@ -32,6 +32,7 @@
+ 
+ #include "parsev2.h"
+ 
++#include <cstring>
+ #include <iostream>
+ #include <fstream>
+ #include <typeinfo>

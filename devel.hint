@@ -1,5 +1,0 @@
-category: Database
-requires: mysql-devel
-external-source: mysql++
-sdesc: "C++ bindings for the MySQL client library (development)"
-ldesc: "C++ bindings for the MySQL client library"

@@ -1,4 +1,0 @@
-category: Database Doc
-external-source: mysql++
-sdesc: "C++ bindings for the MySQL client library (documentation)"
-ldesc: "C++ bindings for the MySQL client library"
